@@ -3,6 +3,7 @@ CREATE TABLE [Books]
     [ISBN] TEXT NOT NULL,
     [Title] TEXT NOT NULL,
     [Author] TEXT,
+    [Edition] INTEGER,
     [Genre] TEXT,
     [Description] TEXT,
     [Original_language_ID] TEXT,

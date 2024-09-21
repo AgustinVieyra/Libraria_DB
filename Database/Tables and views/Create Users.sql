@@ -7,5 +7,5 @@ CREATE TABLE [Users]
     [City] TEXT,
     [Zip_code] TEXT,
     [Country] TEXT,
-    CONSTRAINT [PK_Users] PRIMARY KEY ([User_ID])
+    CONSTRAINT [PK_Users] PRIMARY KEY ([User_ID], [Email])
 );
