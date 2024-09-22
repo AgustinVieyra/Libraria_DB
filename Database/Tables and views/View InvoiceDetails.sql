@@ -30,6 +30,6 @@ DiscountedTransactions AS (
 SELECT *,
     Number_of_items * Lowered_price AS Total_by_title
 FROM DiscountedTransactions
+--WHERE USER_ID = 1 --This gets selected by the user_id looking at their purchase history
 ORDER BY User_ID, Transaction_date DESC, Sale_ID, Number_of_items DESC, Discount_pct DESC, Title
---WHERE USER_ID = 111 --This gets selected by the user_id looking at their purchase history
 ;

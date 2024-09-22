@@ -7,6 +7,6 @@ END AS Month_flag,
     SUM(Number_of_items) 'Books sold', SUM(Subtotal_by_title) 'Subtotal by genre & month',
     SUM((Discount_pct/100)*Subtotal_by_title) AS 'Discounted amount', SUM(Total_by_title) 'Sales by genre & month'
 FROM InvoiceDetails
-WHERE Month_flag IS not NULL
+WHERE Month_flag IS NOT	NULL
 GROUP BY Genre, Month_flag
-ORDER BY Month_flag, 'Books sold' DESC, Genre;
+ORDER BY Month_flag, SUM(Number_of_items) DESC, Genre;
