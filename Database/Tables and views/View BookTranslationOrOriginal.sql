@@ -22,4 +22,4 @@ FROM BooksWithLanguageNames B
         ON T.Language_ID = L.Language_ID)
     ON B.ISBN = T.ISBN
 --WHERE T.Language_ID = 'ESP' ----This gets selected by the user looking for a specific language translation
-;
+ORDER BY L.Language_name DESC, Title;

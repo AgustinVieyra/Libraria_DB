@@ -6,7 +6,7 @@ CASE
 END AS Month_flag,
     SUM(Number_of_items) 'Books sold', SUM(Subtotal_by_title) 'Subtotal by genre & month', SUM((Discount_pct/100)*Subtotal_by_title) AS 'Discounted amount', SUM(Total_by_title) 'Sales by genre & month'
 FROM InvoiceDetails
-WHERE Month_flag IS not NULL
-    AND User_ID = 222 --This gets selected by the user_id looking at their purchase history
+WHERE Month_flag IS NOT NULL
+    AND User_ID = 2 --This gets selected by the user_id looking at their purchase history
 GROUP BY User_ID, Genre, Month_flag
-ORDER BY Month_flag, 'Books sold' DESC, Genre;
+ORDER BY Month_flag, SUM(Number_of_items) DESC, Genre;
